@@ -1,13 +1,13 @@
 TEXTO INTRODUTÓRIO
 
-Para reproduzir o processo de treinamento e validação com AphidCV, siga as instruções definidas na seção [AphidCV 3.0](#teste1).
+Para reproduzir o processo de treinamento e validação com AphidCV, siga as instruções definidas na seção [AphidCV 3.0](#aphidcv-3.0).
 
-Já para reproduzir o processo de treinamento e validação com YOLO, siga as instruções definidas na seção [YOLOv8m](#teste3).
+Já para reproduzir o processo de treinamento e validação com YOLO, siga as instruções definidas na seção [YOLOv8m](#yolov8m).
 
 
 ***
-# <a href="#teste1">AphidCV 3.0</a>
-# Versão configurada para comparação com YOLOv8m
+# AphidCV 3.0
+Versão configurada para comparação com YOLOv8m
 ***
 
 ## Dependências:
@@ -66,10 +66,9 @@ Já para reproduzir o processo de treinamento e validação com YOLO, siga as in
 
 
 ***
-<a href="#teste3">YOLOv8m</a>
 
-# <a href="#teste2">YOLOv8m</a>
-# Versão configurada para comparação com AphidCV 3.0
+# YOLOv8m
+Versão configurada para comparação com AphidCV 3.0
 
 ***
 
