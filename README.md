@@ -1,5 +1,5 @@
 # AphidCV 3.0
-# Versão configurada para comparação com YOLOv8n
+# Versão configurada para comparação com YOLOv8m
 ***
 
 ## Dependências:
