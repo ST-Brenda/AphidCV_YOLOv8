@@ -6,7 +6,7 @@ Já para reproduzir o processo de treinamento e validação com YOLO, siga as in
 
 
 ***
-# <a name="#teste1">AphidCV 3.0</a>
+# <a href="#teste1">AphidCV 3.0</a>
 # Versão configurada para comparação com YOLOv8m
 ***
 
@@ -68,7 +68,7 @@ Já para reproduzir o processo de treinamento e validação com YOLO, siga as in
 ***
 
 
-# <a name="#teste2">YOLOv8m</a>
+# <a href="#teste2">YOLOv8m</a>
 # Versão configurada para comparação com AphidCV 3.0
 
 ***
