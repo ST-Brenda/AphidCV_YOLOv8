@@ -48,7 +48,7 @@
 
 **1.** Considerar o arquivo "PAPER_AphidCV_Albu_Color2kBal_BS100.py", que já possui as configurações supracitadas definidas em código.
 
-**2.** Para gerar um modelo para cada espécie de afídeo, é preciso atualizar o caminho onde estão as imagens. No código, está a marcação "CHANGE HERE BEFORE EACH TRAINING" nos locais onde é preciso alterar o caminho para cada subconjunto do dataset, bem como os acrônimos para definir a pasta e os nomes das documentações de saída.
+**2.** Para gerar um modelo para cada espécie de afídeo, é preciso atualizar o caminho onde estão as imagens. No código, está a marcação "CHANGE HERE BEFORE EACH TRAINING" nos locais onde é preciso alterar o caminho para cada subconjunto do dataset, bem como os acrônimos para definir a pasta e os nomes das documentações de saída. Para esse treinamento, considerar o dataset já organizado no padrão de leitura AphidCV, no arquivo "Datasets_Config_AphidCV.zip".
 
 **3.** Após realizar esses ajustes, basta rodar o script.
 
@@ -125,7 +125,7 @@ Para tanto, você pode:
 - Substituir o arquivo original clonado pelo "augment.py" disponível nesse repositório, ou;
 - Copiar o bloco de código entre as linhas 778-848 do "augment.py" disponível nesse repositório para o arquivo original clonado, sobreescrevendo o bloco entre as linhas 863-891.
 
-**3.** Para gerar um modelo para cada espécie de afídeo, é preciso atualizar o caminho onde está o arquivo de configuração YAML. Na linha de comando, substituir a atribuição data="PASTA-DO-DATASET/ARQUIVO.yaml" pelo caminho correspondente.
+**3.** Para gerar um modelo para cada espécie de afídeo, é preciso atualizar o caminho onde está o arquivo de configuração YAML. Na linha de comando, substituir a atribuição data="PASTA-DO-DATASET/ARQUIVO.yaml" pelo caminho correspondente. Para esse treinamento, considerar o dataset já organizado no padrão de leitura YOLO, no arquivo "Datasets_Config_YOLO.zip".
 
 **4.** Após realizar esses ajustes, basta rodar a linha de comando a partir da pasta principal "ultralytics/":
 
