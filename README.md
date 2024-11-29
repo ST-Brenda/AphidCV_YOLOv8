@@ -2,7 +2,7 @@ TEXTO INTRODUTÓRIO
 
 Para reproduzir o processo de treinamento e validação com AphidCV, siga as instruções definidas na seção [AphidCV 3.0](#teste1).
 
-Já para reproduzir o processo de treinamento e validação com YOLO, siga as instruções definidas na seção [YOLOv8m](#teste2).
+Já para reproduzir o processo de treinamento e validação com YOLO, siga as instruções definidas na seção [YOLOv8m](#teste3).
 
 
 ***
@@ -66,7 +66,7 @@ Já para reproduzir o processo de treinamento e validação com YOLO, siga as in
 
 
 ***
-
+<a href="#teste3">YOLOv8m</a>
 
 # <a href="#teste2">YOLOv8m</a>
 # Versão configurada para comparação com AphidCV 3.0
