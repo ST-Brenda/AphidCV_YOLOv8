@@ -1,8 +1,5 @@
 # AphidCV 3.0
 # Versão configurada para comparação com YOLOv8n
-# Artigo: A comparative study between deep learning approaches for aphid classification
-# Autores: Brenda S Taca, Douglas Lau, Rafael Rieder
-# Data: 29 de novembro de 2024
 ***
 
 ## Dependências:
