@@ -133,7 +133,7 @@ Version configured for comparison with AphidCV 3.0
 
 ### How to Run:
 
-**1.** Pleae, clone the YOLO locally:
+**1.** Please, clone the YOLO locally:
 ```bash
 git clone https://github.com/ultralytics/ultralytics.git -b v8.1.45
 ```
