@@ -4,6 +4,13 @@ Para reproduzir o processo de treinamento e validação com AphidCV, siga as ins
 
 Já para reproduzir o processo de treinamento e validação com YOLO, siga as instruções definidas na seção [YOLOv8m](#yolov8m).
 
+# Authors:
+1. Brenda Slongo Taca
+2. Douglas Lau
+3. Rafael Rieder
+
+# Shipment ID
+xxxx
 
 ***
 # AphidCV 3.0
@@ -147,9 +154,7 @@ Também gera gráficos PNG:
 - Matriz de confusão - versões padrão e normalizada;
 - Curvas precision-recall, precision-confidence, curva recall-confidence e curva F1-confidence. 
 
-Além disso, salva os modelos (best e last) em formato PT. 
-
-Considerar somente o "best.pt".
+Além disso, salva os modelos (best e last) em formato PT. Para o estudo, considerar somente os arquivos "best.pt" de cada espécie.
 
 **6.** Para calcular a métrica de accuracy, considerar os dados obtidos para a matriz de confus˜ao.
 
