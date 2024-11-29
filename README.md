@@ -119,7 +119,7 @@
 ```bash
 git clone https://github.com/ultralytics/ultralytics.git -b v8.1.45
 ```
-**3.** Adicionar no arquivo "ultralytics/ultralytics/data/augment.py" as aumentações necessárias para o processo comparativo: class Albumentations, variável T (# Transforms).
+**2.** Adicionar no arquivo "ultralytics/ultralytics/data/augment.py" as aumentações necessárias para o processo comparativo: class Albumentations, variável T (# Transforms).
 Para tanto, você pode:
 
 - Substituir o arquivo original clonado pelo "augment.py" disponível nesse repositório, ou;
@@ -127,7 +127,7 @@ Para tanto, você pode:
 
 **3.** Para gerar um modelo para cada espécie de afídeo, é preciso atualizar o caminho onde está o arquivo de configuração YAML. Na linha de comando, substituir a atribuição data="PASTA-DO-DATASET/ARQUIVO.yaml" pelo caminho correspondente. Para esse treinamento, considerar o dataset já organizado no padrão de leitura YOLO, no arquivo "Datasets_Config_YOLO.zip".
 
-**4.** Após realizar esses ajustes, basta rodar a linha de comando a partir da pasta principal "ultralytics/":
+**4.** Após realizar esses ajustes, copie para a pasta principal "ultralytics/" o arquivo "yolov8m.pt". Em seguida, basta rodar a linha de comando a partir da pasta principal "ultralytics/":
 
 ```bash
 yolo task=detect mode=train model=yolov8m.pt imgsz=120 data="PASTA-DO-DATASET/ARQUIVO.yaml" epochs=150 batch=100 workers=20 device=0 val=True keras=True patience=10 augment=true
