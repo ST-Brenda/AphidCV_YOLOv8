@@ -67,7 +67,7 @@ Para reproduzir o processo de treinamento e validação com YOLO, siga as instru
 ***
 
 
-# YOLOv8m[link](#teste2)
+# [YOLOv8m](#teste2)
 # Versão configurada para comparação com AphidCV 3.0
 
 ***
