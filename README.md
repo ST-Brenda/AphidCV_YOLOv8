@@ -1,3 +1,6 @@
+TEXTO INTRODUTÓRIO
+
+***
 # AphidCV 3.0
 # Versão configurada para comparação com YOLOv8m
 ***
