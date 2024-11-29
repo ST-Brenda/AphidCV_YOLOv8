@@ -1,23 +1,27 @@
-TEXTO INTRODUTÓRIO
+# A comparative study between deep learning approaches for aphid classification
 
-Para reproduzir o processo de treinamento e validação com AphidCV, siga as instruções definidas na seção [AphidCV 3.0](#aphidcv-30).
+This study presents a performance comparison between two convolutional neural networks in the task of detecting aphids in digital images: AphidCV, customized for counting, classifying, and measuring aphids, and YOLOv8, state-of-the-art in real-time object detection. Our work considered 48,000 images for training for six different insect species (8,000 images divided into four classes), in addition to data augmentation techniques.
 
-Já para reproduzir o processo de treinamento e validação com YOLO, siga as instruções definidas na seção [YOLOv8m](#yolov8m).
+To reproduce the results obtained in our paper, considering training and validation of the AphidCV models, please follow the instructions in [AphidCV 3.0](#aphidcv-30) section.
 
-# Authors:
+And to reproduce the results considering training and validation of the YOLO models, please follow the instructions in [YOLOv8m](#yolov8m) section.
+
+For more info, please contact us or read our paper published in the [IEEE Latin America Transactions](https://latamt.ieeer9.org/index.php/transactions). 
+
+## Authors:
 1. Brenda Slongo Taca
 2. Douglas Lau
 3. Rafael Rieder
 
-# Shipment ID
-xxxx
+## Shipment ID
+9209
 
 ***
-# AphidCV 3.0
-Versão configurada para comparação com YOLOv8m
+## AphidCV 3.0
+Version configured for comparison with YOLOv8m
 ***
 
-## Dependências:
+### Requirements:
 
 - Python 3.10.12
 - TensorFlow 2.8.0
@@ -26,17 +30,17 @@ Versão configurada para comparação com YOLOv8m
 
 ***
 
-## Configurações já definidas em código:
+### Settings already defined in source code:
 
-**Treinamento e validação dos modelos:**
+**Models' training and validation:**
 
-- Learning rate: 0.001 (padrão do otimizador Adam)
+- Learning rate: 0.001 (default value - Adam optimizer)
 - Image size: (120, 120)
 - Epochs: 150
 - Batchsize: 100
 - Patience: 10
 
-**Métricas coletadas:**
+**Metrics:**
 
 - accuracy
 - precision
@@ -44,7 +48,7 @@ Versão configurada para comparação com YOLOv8m
 - roc
 - prc
 
-**Aumentações aplicadas:**
+**Augmentations:**
 
 - RandomRotate90(p=0.5)
 - Blur(p=0.25)
@@ -59,27 +63,27 @@ Versão configurada para comparação com YOLOv8m
 
 ***
 
-## Passos para execução:
+### How to Run:
 
-**1.** Considerar o arquivo "PAPER_AphidCV_Albu_Color2kBal_BS100.py", que já possui as configurações supracitadas definidas em código.
+**1.** Please, consider the "PAPER_AphidCV_Albu_Color2kBal_BS100.py" file, once already has the above settings defined in source code.
 
-**2.** Para gerar um modelo para cada espécie de afídeo, é preciso atualizar o caminho onde estão as imagens. No código, está a marcação "CHANGE HERE BEFORE EACH TRAINING" nos locais onde é preciso alterar o caminho para cada subconjunto do dataset, bem como os acrônimos para definir a pasta e os nomes das documentações de saída. Para esse treinamento, considerar o dataset já organizado no padrão de leitura AphidCV, no arquivo "Datasets_Config_AphidCV.zip".
+**2.** To generate a model for each aphid species, you need to update the path where the images are located. In the source code, there is a "CHANGE HERE BEFORE EACH TRAINING" markup in the places where you need to change the path for each subset of the dataset, as well as the acronyms to define the folder and the names of the output documentation. For this training, consider the "Datasets_Config_AphidCV.zip" dataset, structured in subdirectories according to the AphidCV/TensorFlow specs.
 
-**3.** Após realizar esses ajustes, basta rodar o script.
+**3.** After proceed these adjustments, simply run the Python script.
 
-**4.** Ao final da execução, o tempo de processamento é exibido, e as seguintes saídas em arquivo são geradas: gráfico PNG da arquitetura do modelo, gráficos PNG das curvas de aprendizado (loss, accuracy, precision, recall, roc, prc), histórico em formato CSV, e modelos em formato H5.
+**4.** At the end of each run, the processing time is displayed, and the following file outputs are generated: PNG graph of the model architecture, PNG graphs of the learning curves (loss, accuracy, precision, recall, roc, prc), history in CSV format, and model in H5 format.
 
-**5.** Para calcular a métrica de F1-Score, considerar as medidas obtidas de precision e recall.
+**5.** To calculate the F1-Score, please consider the obtained precision and recall measures.
 
-
-***
-
-# YOLOv8m
-Versão configurada para comparação com AphidCV 3.0
 
 ***
 
-## Dependências:
+## YOLOv8m
+Version configured for comparison with AphidCV 3.0
+
+***
+
+### Requirements:
 
 - Python 3.10.12
 - Ultralytics 8.1.45
@@ -88,7 +92,7 @@ Versão configurada para comparação com AphidCV 3.0
 
 ***
 
-## Configurações definidas em linha de comando:
+### Settings defined on the command line:
 
 - Image size: (120, 120)
 - Epochs: 150
@@ -97,12 +101,12 @@ Versão configurada para comparação com AphidCV 3.0
 
 ***
 
-## Configurações já definidas em código:
+### Settings already defined in source code:
 
-**Treinamento e validação dos modelos:**
-- Learning rate: 0.01 (padrão YOLOv8)
+**Models' training and validation:**
+- Learning rate: 0.01 (default lr value in YOLO)
 
-**Métricas coletadas:**
+**Metrics:**
 - confusion matrix
 - precision (P)
 - recall (R)
@@ -111,9 +115,9 @@ Versão configurada para comparação com AphidCV 3.0
   
 ***
 
-## Alterações a fazer no código original:
+### Changes to be made to the original code:
 
-**Adicionar aumentações (arquivo "augment.py")**
+**Augmentations (add in the "augment.py")**
 - RandomRotate90(p=0.5)
 - Blur(p=0.25)
 - RandomBrightnessContrast(p=0.25)
@@ -127,35 +131,29 @@ Versão configurada para comparação com AphidCV 3.0
   
 ***
 
-## Passos para execução:
+### How to Run:
 
-**1.** Clonar localmente a YOLO:
+**1.** Pleae, clone the YOLO locally:
 ```bash
 git clone https://github.com/ultralytics/ultralytics.git -b v8.1.45
 ```
-**2.** Adicionar no arquivo "ultralytics/ultralytics/data/augment.py" as aumentações necessárias para o processo comparativo: class Albumentations, variável T (# Transforms).
-Para tanto, você pode:
+**2.** Add the required augmentations for the comparative process to the "ultralytics/ultralytics/data/augment.py" file: class Albumentations, variable T (# Transforms). To do this, you can:
 
-- Substituir o arquivo original clonado pelo "augment.py" disponível nesse repositório, ou;
-- Copiar o bloco de código entre as linhas 778-848 do "augment.py" disponível nesse repositório para o arquivo original clonado, sobreescrevendo o bloco entre as linhas 863-891.
+- Replace the original cloned file with the "augment.py" available in this repository, or;
+- Copy the code block between lines 778-848 of the "augment.py" available in this repository to the original cloned file, overwriting the block between lines 863-891.
 
-**3.** Para gerar um modelo para cada espécie de afídeo, é preciso atualizar o caminho onde está o arquivo de configuração YAML. Na linha de comando, substituir a atribuição data="PASTA-DO-DATASET/ARQUIVO.yaml" pelo caminho correspondente. Para esse treinamento, considerar o dataset já organizado no padrão de leitura YOLO, no arquivo "Datasets_Config_YOLO.zip".
+**3.** To generate a model for each aphid species, you need to update the path where the YAML configuration file is located. On the command line, replace the data="DATASET-FOLDER/FILE.yaml" assignment with the corresponding path. For this training, consider the "Datasets_Config_YOLO.zip" dataset, structured in subdirectories according to the YOLO specs.
 
-**4.** Após realizar esses ajustes, copie para a pasta principal "ultralytics/" o arquivo "yolov8m.pt". Em seguida, basta rodar a linha de comando a partir da pasta principal "ultralytics/":
+**4.** After proceed these adjustments, copy the file "yolov8m.pt" to the main "ultralytics/" folder. Then, simply run the command line from the main "ultralytics/" folder:
 
 ```bash
 yolo task=detect mode=train model=yolov8m.pt imgsz=120 data="PASTA-DO-DATASET/ARQUIVO.yaml" epochs=150 batch=100 workers=20 device=0 val=True keras=True patience=10 augment=true
 ```
 
-**5.** Ao final da execução, a YOLO gera um sumário com várias informações de saída, entre elas: 
-- Tempo de processamento e as métricas precision, recall, mAP50 e mAP50-95.
+**5.** At the end of each run, YOLO generates a summary with several output information, including: processing time and the precision, recall, mAP50 and mAP50-95 metrics. It also generates PNG graphs: confusion matrix - standard and normalized versions, and precision-recall, precision-confidence, recall-confidence curves and F1-confidence curves.
 
-Também gera gráficos PNG: 
-- Matriz de confusão - versões padrão e normalizada;
-- Curvas precision-recall, precision-confidence, curva recall-confidence e curva F1-confidence. 
+In addition, it saves the models (best and last) in PT format. For the study, consider only the "best.pt" files of each species.
 
-Além disso, salva os modelos (best e last) em formato PT. Para o estudo, considerar somente os arquivos "best.pt" de cada espécie.
+**6.** To calculate the Accuracy, please consider the data obtained for the confusion matrix.
 
-**6.** Para calcular a métrica de accuracy, considerar os dados obtidos para a matriz de confus˜ao.
-
-**7.** Para calcular a métrica de F1-Score, considerar as medidas obtidas de Precision e Recall.
+**7.** To calculate the F1-Score, please consider the obtained precision and recall measures.
