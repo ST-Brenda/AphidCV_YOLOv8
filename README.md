@@ -67,7 +67,7 @@ Version configured for comparison with YOLOv8m
 
 **1.** Please, consider the "PAPER_AphidCV_Albu_Color2kBal_BS100.py" file, once already has the above settings defined in source code.
 
-**2.** To generate a model for each aphid species, you need to update the path where the images are located. In the source code, there is a "CHANGE HERE BEFORE EACH TRAINING" markup in the places where you need to change the path for each subset of the dataset, as well as the acronyms to define the folder and the names of the output documentation. For this training, consider the "Datasets_Config_AphidCV.zip" dataset, structured in subdirectories according to the AphidCV/TensorFlow specs.
+**2.** To generate a model for each aphid species, you need to update the path where the images are located. In the source code, there is a "CHANGE HERE BEFORE EACH TRAINING" markup in the places where you need to change the path for each subset of the dataset, as well as the acronyms to define the folder and the names of the output documentation. For this training, consider the "Datasets_Config_AphidCV.zip" dataset - [Google Drive Link](https://drive.google.com/drive/folders/14bBIODSyvKjsStbpIEqcByG2FXTRfeG2?usp=drive_link), structured in subdirectories according to the AphidCV/TensorFlow specs.
 
 **3.** After proceed these adjustments, simply run the Python script.
 
@@ -142,7 +142,7 @@ git clone https://github.com/ultralytics/ultralytics.git -b v8.1.45
 - Replace the original cloned file with the "augment.py" available in this repository, or;
 - Copy the code block between lines 778-848 of the "augment.py" available in this repository to the original cloned file, overwriting the block between lines 863-891.
 
-**3.** To generate a model for each aphid species, you need to update the path where the YAML configuration file is located. On the command line, replace the data="DATASET-FOLDER/FILE.yaml" assignment with the corresponding path. For this training, consider the "Datasets_Config_YOLO.zip" dataset, structured in subdirectories according to the YOLO specs.
+**3.** To generate a model for each aphid species, you need to update the path where the YAML configuration file is located. On the command line, replace the data="DATASET-FOLDER/FILE.yaml" assignment with the corresponding path. For this training, consider the "Datasets_Config_YOLO.zip" dataset - [Google Drive Link](https://drive.google.com/drive/folders/14bBIODSyvKjsStbpIEqcByG2FXTRfeG2?usp=drive_link), structured in subdirectories according to the YOLO specs.
 
 **4.** After proceed these adjustments, copy the file "yolov8m.pt" to the main "ultralytics/" folder. Then, simply run the command line from the main "ultralytics/" folder:
 
