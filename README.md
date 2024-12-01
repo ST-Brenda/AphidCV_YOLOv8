@@ -147,7 +147,7 @@ git clone https://github.com/ultralytics/ultralytics.git -b v8.1.45
 **4.** After proceed these adjustments, copy the file "yolov8m.pt" to the main "ultralytics/" folder. Then, simply run the command line from the main "ultralytics/" folder:
 
 ```bash
-yolo task=detect mode=train model=yolov8m.pt imgsz=120 data="PASTA-DO-DATASET/ARQUIVO.yaml" epochs=150 batch=100 workers=20 device=0 val=True keras=True patience=10 augment=true
+yolo task=detect mode=train model=yolov8m.pt imgsz=120 data="Brevicoryne_brassicae.yaml" epochs=150 batch=100 workers=20 device=0 val=True keras=True patience=10 augment=True
 ```
 
 **5.** At the end of each run, YOLO generates a summary with several output information, including: processing time and the precision, recall, mAP50 and mAP50-95 metrics. It also generates PNG graphs: confusion matrix - standard and normalized versions, and precision-recall, precision-confidence, recall-confidence curves and F1-confidence curves.
